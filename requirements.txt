@@ -1,0 +1,26 @@
+# RankEngine AI - Python Dependencies
+# Core Web Framework & Server
+fastapi>=0.111.0,<1.0.0
+uvicorn[standard]>=0.30.0,<1.0.0
+pydantic>=2.7.0,<3.0.0
+pydantic-settings>=2.3.0,<3.0.0
+
+# Database & ORM (PostgreSQL Async)
+sqlalchemy[asyncio]>=2.0.30,<3.0.0
+asyncpg>=0.29.0,<1.0.0
+greenlet>=3.0.3
+
+# Asynchronous Task Queue & Cache
+redis>=5.0.4,<6.0.0
+
+# Scraping, HTTP & HTML Parsing
+httpx>=0.27.0,<1.0.0
+beautifulsoup4>=4.12.3
+lxml>=5.2.2
+
+# External APIs & LLM Integrations
+openai>=1.30.0,<2.0.0
+google-api-python-client>=2.130.0
+
+# Utilities
+python-dotenv>=1.0.1

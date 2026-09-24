@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # Next.js Frontend Dashboard (UI + Live SERP + Quota Engine + AI Actions)
+  # ---------------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rankengine-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=coolify"
+      - "traefik.http.routers.rankengine-frontend.rule=Host(`k5dztgelngb79b23hec38lfi.193.25.218.84.sslip.io`)"
+      - "traefik.http.routers.rankengine-frontend.entrypoints=http"
+      - "traefik.http.services.rankengine-frontend.loadbalancer.server.port=3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://backend:8000/api/v1
+      - GOOGLE_PAGESPEED_API_KEY=${GOOGLE_PAGESPEED_API_KEY}
+      - GOOGLE_PLACES_API_KEY=${GOOGLE_PLACES_API_KEY}
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      - quota_data:/app/data
+    networks:
+      - coolify
+      - rankengine-network
+    depends_on:
+      - backend
+
+  # ---------------------------------------------------------------------------
+  # FastAPI Backend (Asynchronous SEO Pipeline, Companies & SERP Matching)
+  # ---------------------------------------------------------------------------
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: rankengine-backend
+    restart: unless-stopped
+    expose:
+      - 8000
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=False
+      - API_V1_PREFIX=/api/v1
+      - SECRET_KEY=${SECRET_KEY:-rankengine-super-secret-key-32chars-min}
+      - GOOGLE_PAGESPEED_API_KEY=${GOOGLE_PAGESPEED_API_KEY}
+      - GOOGLE_PLACES_API_KEY=${GOOGLE_PLACES_API_KEY}
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+      - OPENAI_API_KEY=${GROQ_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - LLM_BASE_URL=https://api.groq.com/openai/v1
+      - LLM_MODEL=llama-3.3-70b-versatile
+      - LLM_TEMPERATURE=0.2
+    networks:
+      - rankengine-network
+
+networks:
+  coolify:
+    external: true
+  rankengine-network:
+    driver: bridge
+
+volumes:
+  quota_data:
+    name: rankengine_quota_data

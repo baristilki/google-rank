@@ -1,0 +1,130 @@
+{
+  "settings": {
+    "freeQueriesPerDomain": 5,
+    "freeQueriesPerIp": 9999
+  },
+  "voucherCodes": {
+    "SEOPRO-9481": {
+      "credits": 10,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "10 Sorguluk Standart Paket"
+    },
+    "SEOPRO-2104": {
+      "credits": 10,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "10 Sorguluk Standart Paket"
+    },
+    "SEOPRO-7732": {
+      "credits": 10,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "10 Sorguluk Standart Paket"
+    },
+    "SEOPRO-5829": {
+      "credits": 10,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "10 Sorguluk Standart Paket"
+    },
+    "SEOPRO-3419": {
+      "credits": 10,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "10 Sorguluk Standart Paket"
+    },
+    "VIP-6819": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIP-4431": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIP-8902": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIP-1275": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIP-5390": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIPSEO-4819": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "VIPSEO-7731": {
+      "credits": 25,
+      "isUnlimited": false,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "25 Sorguluk VIP Paket"
+    },
+    "UNLIMITED-ALPHA-2026": {
+      "credits": 999999,
+      "isUnlimited": true,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "Sınırsız Yönetici / VIP Erişim Kodu"
+    },
+    "ADMIN-RANK-UNLIMITED": {
+      "credits": 999999,
+      "isUnlimited": true,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "Sınırsız Yönetici / Test Kodu"
+    },
+    "UNLIMITED-BOSS-2026": {
+      "credits": 999999,
+      "isUnlimited": true,
+      "boundDomain": null,
+      "usedCount": 0,
+      "createdAt": "2026-09-23T20:00:00Z",
+      "note": "Sınırsız VIP Yönetici Kodu"
+    }
+  },
+  "domainUsage": {},
+  "ipUsage": {}
+}
